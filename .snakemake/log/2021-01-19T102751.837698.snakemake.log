@@ -1,0 +1,13 @@
+Building DAG of jobs...
+Creating conda environment envs/trim_galore.yaml...
+Downloading and installing remote packages.
+CreateCondaEnvironmentException:
+Could not create conda environment from /home2/yabili/diva.wgs/rules/../envs/trim_galore.yaml:
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... failed
+
+ResolvePackageNotFound: 
+  - trim-galore=0.6.6
+
+
+  File "/opt/conda/envs/snakemake/lib/python3.8/site-packages/snakemake/deployment/conda.py", line 350, in create

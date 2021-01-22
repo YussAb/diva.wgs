@@ -1,0 +1,11 @@
+Building DAG of jobs...
+InputFunctionException in line 26 of /home2/yabili/diva.wgs/rules/samtools.smk:
+Error:
+  KeyError: 0
+Wildcards:
+  sample=HG001
+Traceback:
+  File "/home2/yabili/diva.wgs/rules/samtools.smk", line 32, in <lambda>
+  File "/home2/yabili/diva.wgs/rules/functions.py", line 133, in get_units_by_sample
+  File "/opt/conda/envs/snakemake/lib/python3.8/site-packages/pandas/core/frame.py", line 2902, in __getitem__
+  File "/opt/conda/envs/snakemake/lib/python3.8/site-packages/pandas/core/indexes/base.py", line 2893, in get_loc

@@ -1,26 +1,26 @@
-samples: ../conf/samples.tsv
-units: ../conf/units.tsv
-reheader: ../conf/reheader.tsv
-sets: ../conf/sets.tsv
+samples: "/home2/yabili/diva.wgs/conf/samples.tsv"
+units: "/home2/yabili/diva.wgs/conf/units.tsv"
+reheader: "/home2/yabili/diva.wgs/conf/reheader.tsv"
+sets: "/home2/yabili/diva.wgs/conf/sets.tsv"
 
 references:
-    basepath: "/mnt/references"
-    provider: "gatk"
-    genome_release: "hg38"
+    basepath: "/home2/yabili/gatk_bundle"
+    provider: ""
+    genome_release: ""
 
-genome_fasta: "Homo_sapiens_assembly38.fasta"
+genome_fasta: "reference/resources_broad_hg38_v0_Homo_sapiens_assembly38.fasta"
 
 known_variants:
-    dbsnp: "Homo_sapiens_assembly38.dbsnp138.vcf"
-    hapmap: "hapmap_3.3.hg38.vcf.gz"
-    g1k: "1000G_phase1.snps.high_confidence.hg38.vcf.gz"
-    omni: "1000G_omni2.5.hg38.vcf.gz"
-    mills: "Mills_and_1000G_gold_standard.indels.hg38.vcf.gz"
+    dbsnp: "resources/resources_broad_hg38_v0_Homo_sapiens_assembly38.dbsnp138.vcf"
+    hapmap: "resources/resources_broad_hg38_v0_hapmap_3.3.hg38.vcf.gz"
+    g1k: "resources/resources_broad_hg38_v0_1000G_phase1.snps.high_confidence.hg38.vcf.gz"
+    omni: "resources/resources_broad_hg38_v0_1000G_omni2.5.hg38.vcf.gz"
+    mills: "resources/resources_broad_hg38_v0_Mills_and_1000G_gold_standard.indels.hg38.vcf.gz"
     #ph1_indels: "known_variants/1000G_phase1.indels.hg19.sites.vcf"
-    ph1_indels: "Homo_sapiens_assembly38.known_indels.vcf.gz"
+    ph1_indels: "resources/resources_broad_hg38_v0_Homo_sapiens_assembly38.known_indels.vcf.gz"
 
 
-tmp_dir: "/mnt/tmp"
+tmp_dir: "/home2/yabili/tmp"
 
 rules:
     bwa_mem:
@@ -47,7 +47,7 @@ rules:
     gatk_SplitIntervals:
         scatter-count: 25
         mode: BALANCING_WITHOUT_INTERVAL_SUBDIVISION_WITH_OVERFLOW
-        intervals: "/mnt/references/gatk/hg38/wgs_calling_regions.hg38.interval_list"
+        intervals: "/home2/yabili/gatk_bundle/resources/resources_broad_hg38_v0_wgs_calling_regions.hg38.interval_list"
         threads: 2
     gatk_BQSR_data_processing:
         known_sites:

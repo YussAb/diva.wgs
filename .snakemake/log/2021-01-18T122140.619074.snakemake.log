@@ -1,0 +1,11 @@
+FileNotFoundError in line 7 of /home2/yabili/diva.wgs/Snakefile:
+[Errno 2] No such file or directory: '../conf/samples.tsv'
+  File "/home2/yabili/diva.wgs/Snakefile", line 7, in <module>
+  File "/opt/conda/envs/snakemake/lib/python3.8/site-packages/pandas/io/parsers.py", line 755, in read_table
+  File "/opt/conda/envs/snakemake/lib/python3.8/site-packages/pandas/io/parsers.py", line 686, in read_csv
+  File "/opt/conda/envs/snakemake/lib/python3.8/site-packages/pandas/io/parsers.py", line 452, in _read
+  File "/opt/conda/envs/snakemake/lib/python3.8/site-packages/pandas/io/parsers.py", line 936, in __init__
+  File "/opt/conda/envs/snakemake/lib/python3.8/site-packages/pandas/io/parsers.py", line 1168, in _make_engine
+  File "/opt/conda/envs/snakemake/lib/python3.8/site-packages/pandas/io/parsers.py", line 1998, in __init__
+  File "pandas/_libs/parsers.pyx", line 382, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 674, in pandas._libs.parsers.TextReader._setup_parser_source
